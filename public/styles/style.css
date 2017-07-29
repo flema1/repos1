@@ -1,0 +1,202 @@
+input[type="submit"],
+input[type=password],
+input[type=number],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    cursor: pointer;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  font-size: 18px;
+  font-family: sans-serif;
+  line-height: 1.4em;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 80vw;
+  margin: auto;
+}
+
+nav ul li a {
+  padding: 15px 30px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: 0.2s all;
+  display: block;
+}
+
+nav ul li:hover a {
+  color: white;
+  background-color: blue;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 300px;
+  background-image: url(/images/movie-hero.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-color: blue;
+  background-blend-mode: multiply;
+  color: white;
+}
+
+.index .hero h1 {
+  font-size: 3em;
+  font-weight: 900;
+}
+
+.movie-container {
+  flex: 3;
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.show .movie-container {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.seeall {
+  flex: 1;
+  font-size: 1.8em;
+  color: black;
+  border-bottom: 3px solid blue;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.linkback {
+  flex: 1;
+}
+
+.movie-container .movie {
+  display: flex;
+  flex-direction: column;
+  flex: 1 300px;
+  padding: 15px;
+  margin: 5px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.movie-container .movie h2 {
+  color: blue;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 900;
+  font-style: oblique;
+  line-height: 1em;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.links {
+  display: flex;
+  font-size: 0.8em;
+  color: white;
+  background-color: blue;
+  justify-content: space-around;
+  margin: 5px;
+  padding: 5px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover, .links input:hover {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.add form, .edit form {
+  width: 50vw;
+  padding: 50px;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+}
+
+form input[type=text], form input[type=number], form input[type=email], form input[type=password] {
+  border: 0;
+  border-bottom: 3px solid #eee;
+  font-size: 1.7em;
+  margin: 20px 0;
+  padding: 5px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+}
+
+form input[type=text]:focus, form input[type=number]:focus,
+form input[type=email]:focus, form input[type=password]:focus {
+  border-bottom: 3px solid blue;
+  outline: 0;
+}
+
+.add form input[type=submit], .edit form input[type=submit], 
+.login form input[type=submit], .register form input[type=submit]  {
+  background-color: blue;
+  display: block;
+  margin: auto;
+  padding: 10px 30px;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add form input[type=submit]:hover, .add form input[type=submit]:focus,
+.edit form input[type=submit]:hover, .edit form input[type=submit]:focus {
+  outline: 0;
+  background-color: blue;
+}

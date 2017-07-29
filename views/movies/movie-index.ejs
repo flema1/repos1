@@ -1,0 +1,23 @@
+<% include ../partials/boilerplate %>
+
+<div class='hero'>
+  <h1>All Movies</h1>
+</div>
+
+  <div class='movie-container'>
+    <% for (let movie of data) { %>
+      <div class='movie'>
+        <h2><%= movie.title %></h2>
+        <h3><%= movie.genre %></h3>
+        <h3><%= movie.year %></h3>
+        <div class='links'>
+          <a class='linkto' href='/movies/<%= movie.id%>'>Learn more</a>
+          <form method='POST' action='/movies/<%= movie.id %>?_method=DELETE'>
+            <input type='submit' value='Delete it!' />
+          </form>
+        </div>
+      </div>
+    <% } %>
+  </div>
+
+<% include ../partials/end %>

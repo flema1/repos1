@@ -1,0 +1,10 @@
+<% include ../partials/boilerplate %>
+
+<form method='POST' action='/movies/<%= data.id %>?_method=PUT'>
+  <input name='title' type='text' value='<%= data.title %>' />
+  <input name='year' type='number' value='<%= data.year %>' />
+  <input name='genre' type='text' value='<%= data.genre %>' />
+  <input type='submit' value='Edit it!' />
+</form>
+ 
+<% include ../partials/end %>
